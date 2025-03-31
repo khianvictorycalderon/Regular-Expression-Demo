@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/index.css" />
+    <script src="assets/index.js"></script>
+    <title>Regular Expression Demo</title>
+  </head>
+  <body>
+    <div class="sticky">
+      <p>Each string contains default value, change it as you wish</p>
+      <p>String 1: <input type="text" id="string1" value="ÑñÁÉÍÓÚáéíóúÜü" /></p>
+      <p>String 2: <input type="text" id="string2" value="ThisIsATest" /></p>
+      <p>String 3: <input type="text" id="string3" value="123Computer 907" /></p>
+      <p>String 4: <input type="text" id="string4" value="KASF@gmail.com" /></p>
+      <p>String 5: <input type="text" id="string5" value="PS2!SM+=" /></p>
+    </div>
+
+    <h4>Test if each string contains a number:</h4>
+    <p>
+      String 1: <span id="string1NumberTest">______</span>
+    </p>
+    <p>
+      String 2: <span id="string2NumberTest">______</span>
+    </p>
+    <p>
+      String 3: <span id="string3NumberTest">______</span>
+    </p>
+    <p>
+      String 4: <span id="string4NumberTest">______</span>
+    </p>
+    <p>
+      String 5: <span id="string5NumberTest">______</span>
+    </p>
+    <hr/>
+
+    <h4>Test if each string contains a non-number character:</h4>
+    <p>
+      String 1: <span id="string1NonNumberTest">______</span>
+    </p>
+    <p>
+      String 2: <span id="string2NonNumberTest">______</span>
+    </p>
+    <p>
+      String 3: <span id="string3NonNumberTest">______</span>
+    </p>
+    <p>
+      String 4: <span id="string4NonNumberTest">______</span>
+    </p>
+    <p>
+      String 5: <span id="string5NonNumberTest">______</span>
+    </p>
+    <hr/>
+
+    <h4>Test if each string contains lower case letter:</h4>
+    <p>
+      String 1: <span id="string1LowerCaseTest">______</span>
+    </p>
+    <p>
+      String 2: <span id="string2LowerCaseTest">______</span>
+    </p>
+    <p>
+      String 3: <span id="string3LowerCaseTest">______</span>
+    </p>
+    <p>
+      String 4: <span id="string4LowerCaseTest">______</span>
+    </p>
+    <p>
+      String 5: <span id="string5LowerCaseTest">______</span>
+    </p>
+    <hr/>
+
+    <h4>Test if each string contains upper case letter:</h4>
+    <p>
+      String 1: <span id="string1UpperCaseTest">______</span>
+    </p>
+    <p>
+      String 2: <span id="string2UpperCaseTest">______</span>
+    </p>
+    <p>
+      String 3: <span id="string3UpperCaseTest">______</span>
+    </p>
+    <p>
+      String 4: <span id="string4UpperCaseTest">______</span>
+    </p>
+    <p>
+      String 5: <span id="string5UpperCaseTest">______</span>
+    </p>
+    <hr/>
+
+    <h4>Test if each string contains a non-letter character (A-Z Case-Insensitive):</h4>
+    <p>
+      String 1: <span id="string1NotLetterTest">______</span>
+    </p>
+    <p>
+      String 2: <span id="string2NotLetterTest">______</span>
+    </p>
+    <p>
+      String 3: <span id="string3NotLetterTest">______</span>
+    </p>
+    <p>
+      String 4: <span id="string4NotLetterTest">______</span>
+    </p>
+    <p>
+      String 5: <span id="string5NotLetterTest">______</span>
+    </p>
+    <hr/>
+
+    <h4>Test if each string contains a whitespace (space/new line/tab):</h4>
+    <p>
+      String 1: <span id="string1WhiteSpaceTest">______</span>
+    </p>
+    <p>
+      String 2: <span id="string2WhiteSpaceTest">______</span>
+    </p>
+    <p>
+      String 3: <span id="string3WhiteSpaceTest">______</span>
+    </p>
+    <p>
+      String 4: <span id="string4WhiteSpaceTest">______</span>
+    </p>
+    <p>
+      String 5: <span id="string5WhiteSpaceTest">______</span>
+    </p>
+    <hr/>
+
+    <h4>Test if each string is a valid name (must contains letters or accented letters only):</h4>
+    <p>
+      String 1: <span id="string1ValidNameTest">______</span>
+    </p>
+    <p>
+      String 2: <span id="string2ValidNameTest">______</span>
+    </p>
+    <p>
+      String 3: <span id="string3ValidNameTest">______</span>
+    </p>
+    <p>
+      String 4: <span id="string4ValidNameTest">______</span>
+    </p>
+    <p>
+      String 5: <span id="string5ValidNameTest">______</span>
+    </p>
+    <hr/>
+
+    <h4>Test if each string is a valid email:</h4>
+    <p>
+      String 1: <span id="string1ValidEmailTest">______</span>
+    </p>
+    <p>
+      String 2: <span id="string2ValidEmailTest">______</span>
+    </p>
+    <p>
+      String 3: <span id="string3ValidEmailTest">______</span>
+    </p>
+    <p>
+      String 4: <span id="string4ValidEmailTest">______</span>
+    </p>
+    <p>
+      String 5: <span id="string5ValidEmailTest">______</span>
+    </p>
+    <hr/>
+
+    <h4>Test if each string is a valid date format (00-00-0000):</h4>
+    <p>
+      String 1: <span id="string1ValidDateTest">______</span>
+    </p>
+    <p>
+      String 2: <span id="string2ValidDateTest">______</span>
+    </p>
+    <p>
+      String 3: <span id="string3ValidDateTest">______</span>
+    </p>
+    <p>
+      String 4: <span id="string4ValidDateTest">______</span>
+    </p>
+    <p>
+      String 5: <span id="string5ValidDateTest">______</span>
+    </p>
+    
+    <br/><br/><br/>
+  </body>
+</html>
